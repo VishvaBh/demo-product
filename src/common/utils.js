@@ -1,5 +1,10 @@
 import { Dimensions } from 'react-native';
 
+/**
+  * format currency in Euro
+  * @argument : amount,
+  * @returns : formattedCurrency
+  */
 export const formatCurrency = (amount) => {
     const formattedCurrency = new Intl.NumberFormat('en-DE', { style: 'currency', currency: 'EUR' }).format(amount);
     if (formattedCurrency === "NaN") {

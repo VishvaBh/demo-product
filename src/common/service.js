@@ -1,3 +1,8 @@
+/**
+  * call get Api request
+  * @argument : url,
+  * @returns : response from api
+  */
 export function sendGetRequest(url) {
     return new Promise((resolve, reject) => {
         fetch(url)

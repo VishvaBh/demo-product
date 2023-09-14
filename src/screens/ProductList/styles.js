@@ -53,6 +53,35 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap',
         justifyContent: 'flex-start',
     },
+    searchView: {
+        flexDirection: 'row',
+        marginHorizontal: 10,
+        padding: 5,
+        backgroundColor: 'white',
+        borderRadius: 10,
+        shadowColor: 'gray',
+        shadowRadius: 2,
+        shadowOpacity: 0.2,
+        shadowOffset: { width: 2, height: 2 },
+        elevation: 5,
+        marginTop: 10,
+        alignItems: 'center',
+    },
+    searchText: {
+        color: 'black',
+        fontWeight: '500',
+        fontSize: 15,
+        textAlign: 'left',
+        flex: 1,
+    },
+    iconContainer: {
+        paddingHorizontal: 3,
+        marginHorizontal: 3,
+    },
+    icon: {
+        width: 20,
+        height: 20,
+    },
 });
 
 export default styles;
