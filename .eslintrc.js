@@ -25,7 +25,6 @@ module.exports = {
     'linebreak-style': ['off'],
     'import/prefer-default-export': ['off'],
     quotes: ['off'],
-    'import/no-extraneous-dependencies': ['off'],
     'react/react-in-jsx-scope': ['off'],
     indent: ['off'],
     'react/jsx-indent': ['off'],

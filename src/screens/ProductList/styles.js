@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { responsiveHeight, responsiveWidth } from "../../common/utils";
+import { responsiveWidth } from "../../common/utils";
 
 const styles = StyleSheet.create({
     baseComponent: {
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     },
     image: {
         width: responsiveWidth(100),
-        height: responsiveHeight(100),
+        height: responsiveWidth(100),
         borderRadius: responsiveWidth(10),
         overflow: 'hidden',
         marginEnd: responsiveWidth(10),

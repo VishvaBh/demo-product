@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         borderRadius: 5,
     },
     dotContainer: {
-        top: responsiveHeight(imageHeight + 30),
+        top: responsiveHeight(imageHeight) + 25,
     },
     infoHeader: {
         flexDirection: 'row',
