@@ -2,7 +2,7 @@ import { sendGetRequest } from "../common/service";
 
 export function getProductList(limit) {
     return new Promise((resolve, reject) => {
-        const url = `https://dummyjson.com/products?limit=${limit}&select=id,title,description,price,thumbnail`;
+        const url = `https://dummyjson.com/products?limit=${limit}&select=id,title,description,price,thumbnail,images`;
         sendGetRequest(url).then((response) => {
             resolve(response);
         }).catch((err) => {

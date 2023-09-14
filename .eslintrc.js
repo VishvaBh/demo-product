@@ -31,5 +31,6 @@ module.exports = {
     'react/jsx-indent': ['off'],
     'react/jsx-indent-props': ['off'],
     'react/prop-types': ['off'],
+    'react/destructuring-assignment': ['off'],
   },
 };

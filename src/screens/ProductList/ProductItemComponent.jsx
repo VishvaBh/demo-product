@@ -7,7 +7,7 @@ import styles from "./styles";
 export default function ProductComponent({ productData, onPress }) {
     return (
         <TouchableOpacity style={styles.itemComponent} onPress={() => { onPress(productData); }}>
-            <Image style={styles.image} source={{ uri: productData.thumbnail }} />
+            <Image resizeMode="contain" style={styles.image} source={{ uri: productData.thumbnail }} />
             <View style={{ flex: 1 }}>
                 <Text style={styles.title}>{productData.title}</Text>
                 <Text style={styles.price}>{`Price: ${formatCurrency(productData.price)}`}</Text>

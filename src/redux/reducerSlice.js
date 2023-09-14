@@ -2,16 +2,15 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const reducerSlice = createSlice({
   name: 'reducer',
-  initialState: { demo: 0 },
+  initialState: { product: {} },
   reducers: {
-    demoAction(action, state) {
-      state.push({
-        demo: action.payload,
-      });
+    setCurrentProduct(state, action) {
+      // eslint-disable-next-line no-param-reassign
+      state.product = action.payload;
     },
   },
 
 });
 
-export const { demoAction } = reducerSlice.actions;
+export const { setCurrentProduct } = reducerSlice.actions;
 export default reducerSlice.reducer;
