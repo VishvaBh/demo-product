@@ -29,5 +29,7 @@ module.exports = {
     'react/react-in-jsx-scope': ['off'],
     indent: ['off'],
     'react/jsx-indent': ['off'],
+    'react/jsx-indent-props': ['off'],
+    'react/prop-types': ['off'],
   },
 };
