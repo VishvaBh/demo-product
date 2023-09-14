@@ -82,6 +82,12 @@ const styles = StyleSheet.create({
         width: 20,
         height: 20,
     },
+    noData: {
+        color: 'black',
+        fontWeight: 'bold',
+        fontSize: 15,
+        alignSelf: 'center',
+    },
 });
 
 export default styles;

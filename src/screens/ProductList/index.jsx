@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
-    View, FlatList, ActivityIndicator, RefreshControl, Image, TouchableOpacity, TextInput,
+    View, FlatList, ActivityIndicator, RefreshControl, Image, TouchableOpacity, TextInput, Text,
 } from "react-native";
 import { connect, useDispatch } from "react-redux";
 import styles from "./styles";
@@ -60,6 +60,7 @@ function ProductListScreen({ navigation }) {
             (item) => item.title.toLowerCase().includes(text.toLowerCase()),
         );
         setFilteredProductList(filter);
+        setFetch(false);
     }
 
     useEffect(() => {
@@ -86,7 +87,7 @@ function ProductListScreen({ navigation }) {
                         placeholderTextColor="gray"
                         placeholder="Enter name"
                         returnKeyType="search"
-                        onSubmitEditing={({ nativeEvent: { text, eventCount, target } }) => {
+                        onSubmitEditing={({ nativeEvent: { text } }) => {
                             filterItem(text);
                         }}
                     />
@@ -109,6 +110,11 @@ function ProductListScreen({ navigation }) {
                 refreshControl={(
                     <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
                 )}
+                ListEmptyComponent={
+                    !fetch && filteredProductList.length === 0
+                        ? <Text style={styles.noData}>No Product Available</Text>
+                        : null
+                }
                 ListFooterComponent={fetch ? <ActivityIndicator /> : null}
                 ItemSeparatorComponent={<View style={styles.itemSeparator} />}
                 renderItem={({ item }) => (
